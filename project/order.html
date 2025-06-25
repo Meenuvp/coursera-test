@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fudgicraft</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <style>
+          .navbar-custom {
+               background-color: #ff9aa2;
+          }
+          label {
+              display: block;
+              margin-top: 10px;
+              font-weight: bold;
+          }
+          input, select, textarea {
+              margin-top: 5px;
+              border: 1px solid black;
+              border-radius: 4px;
+            }
+            button {
+              background-color: #8b4513;
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 4px;
+              margin-top: 15px;
+              cursor: pointer;
+            }
+            button:hover {
+              background-color: #5a2c0d;
+            }
+         </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-custom">
+  <!-- Brand/logo -->
+  <a class="navbar-brand"><img src="logo.jpeg" class="rounded-circle" alt="Logo" width="100"></a>
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="home.html"style="color: black;"">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html"style="color: black;"">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="menu.html"style="color: black;"">Menu</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="order.html"style="color: black;"">Order</a>
+    </li>
+  </ul>
+</nav>
+        <h1 style="color:brown;text-align: center;">Order Your Brownies</h1>
+  <form action="control.php" method="POST">
+    <table>
+      <tr>
+        <td><label for="name">Full Name *</label></td>
+        <td><input type="text" id="name" name="name" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="phone">Phone Number *</label></td>
+        <td><input type="tel" id="phone" name="phone" required></td>
+      </tr>
+
+      <tr>
+        <td> <label for="email">Email Address</label></td>
+        <td><input type="email" id="email" name="email"></td>
+      </tr>
+
+    <tr>
+      <td><label for="brownie-type">Brownie Type *</label></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="classic" name="brownie[]" value="Classic"></td>
+      <td><label for="classic"> Classic Brownie</label><br></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="Nuttella" name="brownie[]" value="Nuttella"></td>
+      <td><label for="Nuttella"> Nuttella Brownie</label><br></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="Triple-Chocolate" name="brownie[]" value="tripple chocolateS"></td>
+      <td><label for="Triple-Chocolate"> Triple Chocolate Brownie</label><br></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="Double - chocolate" name="brownie[]" value="tripple chocolateS"></td>
+      <td><label for="Double - chocolate"> Double Chocolate Brownie</label><br></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="CheeseCake" name="brownie[]" value="tripple chocolateS"></td>
+      <td><label for="CheeseCake">CheeseCake Brownie</label><br></td>
+    </tr>
+
+    <tr>
+      <td><input type="checkbox" id="Lotus-biscoff" name="brownie[]" value="tripple chocolateS"></td>
+      <td><label for="Lotus-biscoff">Lotus-biscoff Brownie</label><br></td>
+    </tr>
+    <tr>
+      <td><label for="quantity">Quantity (in boxes) *</label></td>
+      <td><input type="number" id="quantity" name="quantity" min="1" required></td>
+    </tr>
+
+    <tr>
+      <td><label for="pickup-date">Pickup/Delivery Date *</label></td>
+      <td><input type="date" id="pickup-date" name="pickup-date" required></td>
+    </tr>
+
+    <tr>
+      <td><label for="Address">Address</label></td>
+      <td><textarea id="Address" name="Address" rows="4" placeholder="Address....."></textarea></td>
+    </tr>
+
+    <tr>
+      <td><label for="notes">Special Requests</label></td>
+      <td><textarea id="notes" name="notes" rows="4" placeholder="Any allergies, message on box, etc."></textarea><br></td>
+    </tr>
+    </table>
+    <button type="submit" style="position: absolute;left: 50%;">Place Order</button>
+  </form>
+    </body>
+</html>
